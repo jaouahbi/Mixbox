@@ -18,13 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         -> Bool
     {
         #if DEBUG
-        if ProcessInfo.processInfo.environment["MIXBOX_ENABLE_IN_APP_SERVICES"] == "true" {
-            let mixboxInAppServices = MixboxInAppServices()
-            
-            self.mixboxInAppServices = mixboxInAppServices
-            
-            mixboxInAppServices?.start()
+        let factoryOrNil = InAppServicesDependenciesFactoryImpl(
+            environment: ProcessInfo.processInfo.environment
+        )
+        
+        if let factory = factoryOrNil {
+            mixboxInAppServices = MixboxInAppServices(
+                inAppServicesDependenciesFactory: factory
+            )
+        } else {
+            mixboxInAppServices = nil
         }
+        
+        _ = mixboxInAppServices?.start()
+        
         #endif
         
         return true

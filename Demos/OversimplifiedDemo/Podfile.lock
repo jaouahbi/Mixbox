@@ -1,0 +1,182 @@
+PODS:
+  - CocoaImageHashing (1.7.0)
+  - Dip (7.0.1)
+  - GCDWebServer (3.5.3):
+    - GCDWebServer/Core (= 3.5.3)
+  - GCDWebServer/Core (3.5.3)
+  - MixboxAnyCodable (0.2.3)
+  - MixboxBlack (0.2.3):
+    - MixboxDi
+    - MixboxIpcSbtuiClient
+    - MixboxUiTestsFoundation
+  - MixboxBuiltinIpc (0.2.3):
+    - GCDWebServer
+    - MixboxIpc
+  - MixboxDi (0.2.3):
+    - Dip
+    - MixboxFoundation
+  - MixboxFoundation (0.2.3)
+  - MixboxInAppServices (0.2.3):
+    - MixboxBuiltinIpc
+    - MixboxIpcCommon
+    - MixboxIpcSbtuiHost
+    - MixboxTestability
+    - MixboxUiKit
+  - MixboxIpc (0.2.3):
+    - MixboxFoundation
+  - MixboxIpcCommon (0.2.3):
+    - MixboxAnyCodable
+    - MixboxIpc
+  - MixboxIpcSbtuiClient (0.2.3):
+    - MixboxIpc
+    - MixboxTestsFoundation
+    - MixboxUiTestsFoundation
+    - SBTUITestTunnel/Client (~> 3.0.6)
+  - MixboxIpcSbtuiHost (0.2.3):
+    - MixboxIpc
+    - SBTUITestTunnel/Server (~> 3.0.6)
+  - MixboxTestability (0.2.3)
+  - MixboxTestsFoundation (0.2.3):
+    - MixboxFoundation
+    - MixboxUiKit
+    - SQLite.swift
+  - MixboxUiKit (0.2.3):
+    - MixboxFoundation
+  - MixboxUiTestsFoundation (0.2.3):
+    - CocoaImageHashing
+    - MixboxAnyCodable
+    - MixboxDi
+    - MixboxIpcCommon
+    - MixboxTestsFoundation
+    - MixboxUiKit
+  - SBTUITestTunnel/Client (3.0.14)
+  - SBTUITestTunnel/Server (3.0.14):
+    - GCDWebServer (~> 3.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+
+DEPENDENCIES:
+  - Dip
+  - MixboxAnyCodable (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxBlack (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxBuiltinIpc (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxDi (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxFoundation (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxInAppServices (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxIpc (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxIpcCommon (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxIpcSbtuiClient (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxIpcSbtuiHost (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxTestability (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxTestsFoundation (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxUiKit (from `https://github.com/avito-tech/Mixbox`)
+  - MixboxUiTestsFoundation (from `https://github.com/avito-tech/Mixbox`)
+  - SQLite.swift
+
+SPEC REPOS:
+  trunk:
+    - CocoaImageHashing
+    - Dip
+    - GCDWebServer
+    - SBTUITestTunnel
+    - SQLite.swift
+
+EXTERNAL SOURCES:
+  MixboxAnyCodable:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxBlack:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxBuiltinIpc:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxDi:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxFoundation:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxInAppServices:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpc:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpcCommon:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpcSbtuiClient:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpcSbtuiHost:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxTestability:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxTestsFoundation:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxUiKit:
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxUiTestsFoundation:
+    :git: https://github.com/avito-tech/Mixbox
+
+CHECKOUT OPTIONS:
+  MixboxAnyCodable:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxBlack:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxBuiltinIpc:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxDi:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxFoundation:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxInAppServices:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpc:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpcCommon:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpcSbtuiClient:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxIpcSbtuiHost:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxTestability:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxTestsFoundation:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxUiKit:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+  MixboxUiTestsFoundation:
+    :commit: 350a707b117621e5f461e63075d341c2c21b6117
+    :git: https://github.com/avito-tech/Mixbox
+
+SPEC CHECKSUMS:
+  CocoaImageHashing: 2c8efd6dd60f9030cd54086b34ffc48e927821c3
+  Dip: 79509d5dc4f648e10e922ed79c608a7761c52b13
+  GCDWebServer: c0ab22c73e1b84f358d1e2f74bf6afd1c60829f2
+  MixboxAnyCodable: 94421d76e8d4b7c66fefe5ce9267587207e4d805
+  MixboxBlack: 1ce8cabcfcc49fc6a46e51a36580460ccea3b219
+  MixboxBuiltinIpc: 26880327fbb22e9f6e96a13b26ef7015749bf946
+  MixboxDi: 3e75421e302d50f57974cdb337b3b95adb885fb7
+  MixboxFoundation: adbfd517f145b40403bd43699181f487d33758ed
+  MixboxInAppServices: 9faf4b53e326684d476b6587c3a18dfb15744313
+  MixboxIpc: 03e3a25d4c9fa699c87d3f0c166e47363f8d25e1
+  MixboxIpcCommon: 71629f707c370f201ab475856b90762cc1e158d7
+  MixboxIpcSbtuiClient: 0fda0fcd3d54687edad6138c2febf593c51fca51
+  MixboxIpcSbtuiHost: 19ca10eed91be1c32fbeba9686b97f0df46ea777
+  MixboxTestability: f2ae73479007568fafb48b6a62b98e05986b8a80
+  MixboxTestsFoundation: 8c5e098fd24816b9f18226bffffb789b48fcdac6
+  MixboxUiKit: aa78cf7ebcd02e90c3ebb2865091adf3396f2f81
+  MixboxUiTestsFoundation: e81928e07266eebb199cc40383d4c20e77cf5727
+  SBTUITestTunnel: 50c315f2fd1bfd144be8e0eb4c0a1e35ccbe5e9f
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+
+PODFILE CHECKSUM: 1926f481296e55ed413635322423065cee0f3012
+
+COCOAPODS: 1.8.3

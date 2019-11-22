@@ -6,14 +6,75 @@ platform :ios, :deployment_target => '9.0'
 inhibit_all_warnings!
 use_frameworks!
 
-target 'OversimplifiedDemo' do
-  pod 'MixboxInAppServices', '0.2.3'
+### Mixbox frameworks
+
+def mixbox_ui_tests_pods
+  mixbox_pod 'MixboxTestsFoundation'
+  mixbox_pod 'MixboxUiTestsFoundation'
+  mixbox_pod 'MixboxFoundation'
+  mixbox_pod 'MixboxDi'
   
-  pod 'SQLite.swift', '0.11.5' # Xcode 10.2: '0.12.0' (lower also suits)
+  pod 'SQLite.swift', :inhibit_warnings => true
+  pod 'Dip', :inhibit_warnings => true
+end
+
+def mixbox_application_testability_and_ui_tests_common_pods
+  mixbox_pod 'MixboxIpc'
+  mixbox_pod 'MixboxIpcCommon'
+  mixbox_pod 'MixboxUiKit'
+  mixbox_pod 'MixboxAnyCodable'
+end
+
+def mixbox_application_testability_and_blackbox_testing_common_pods
+  mixbox_application_testability_and_ui_tests_common_pods
+  
+  mixbox_pod 'MixboxBuiltinIpc'
+end
+
+def mixbox_application_testability_pods
+  mixbox_application_testability_and_blackbox_testing_common_pods
+  
+  mixbox_pod 'MixboxTestability'
+  mixbox_pod 'MixboxIpcSbtuiHost'
+  mixbox_pod 'MixboxInAppServices'
+end
+
+def mixbox_blackbox_tests_pods
+  mixbox_ui_tests_pods
+  mixbox_application_testability_and_blackbox_testing_common_pods
+
+  mixbox_pod 'MixboxIpcSbtuiClient'
+  mixbox_pod 'MixboxBlack'
+end
+
+def mixbox_graybox_tests_pods
+  mixbox_ui_tests_pods
+  mixbox_application_testability_and_ui_tests_common_pods
+  
+  mixbox_pod 'MixboxGray'
+end
+
+def mixbox_whitebox_tests_pods
+  # nothing is here yet
+end
+
+def mixbox_pod(name)
+  hash = {}
+
+  hash[:git] = 'https://github.com/avito-tech/Mixbox'
+  hash[:commit] = ENV['MIXBOX_DEVELOPMENT_COMMIT']
+
+  pod(name, hash)
+end
+
+# Targets
+
+target 'OversimplifiedDemo' do
+  mixbox_application_testability_pods
 end
 
 target 'OversimplifiedDemoUITests' do
-  pod 'MixboxXcuiDriver', '0.2.3'
+  mixbox_blackbox_tests_pods
 end
   
 post_install do |installer|
