@@ -2,10 +2,8 @@ import Foundation
 import CiFoundation
 
 public enum Env: String {
-    case MIXBOX_CI_BLUEPILL_ZIP_PATH
     case MIXBOX_CI_BUILD_EXECUTABLE
     case MIXBOX_CI_DESTINATION
-    case MIXBOX_CI_EMCEE_FBSIMCTL_URL
     case MIXBOX_CI_EMCEE_FBXCTEST_URL
     case MIXBOX_CI_EMCEE_PATH
     case MIXBOX_CI_EMCEE_QUEUE_SERVER_RUN_CONFIGURATION_URL
@@ -19,8 +17,6 @@ public enum Env: String {
     case MIXBOX_CI_LOG_LEVEL
     case MIXBOX_CI_USES_FBXCTEST
     case MIXBOX_PUSHSPEC_STYLE
-    case MIXBOX_CI_WATCHDOG_SETTINGS_URL
-    case MIXBOX_CI_SIMULATOR_LOCALIZATION_URL
 }
 
 extension EnvironmentProvider {

@@ -95,7 +95,7 @@ public final class EmceeDumpCommandImpl: EmceeDumpCommand {
                     testType: TestType.logicTest,
                     testsToRun: [],
                     toolResources: ToolResources(
-                        simulatorControlTool: .fbsimctl(FbsimctlLocation(ResourceLocation.from(arguments.fbsimctl))),
+                        simulatorControlTool: .simctl,
                         testRunnerTool: .fbxctest(FbxctestLocation(ResourceLocation.from(arguments.fbxctest)))
                     ),
                     toolchainConfiguration: try toolchainConfigurationProvider.toolchainConfiguration()

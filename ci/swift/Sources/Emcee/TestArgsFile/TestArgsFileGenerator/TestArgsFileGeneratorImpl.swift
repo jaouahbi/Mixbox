@@ -50,7 +50,6 @@ public final class TestArgFileGeneratorImpl: TestArgFileGenerator {
             environment: arguments.environment,
             testType: arguments.testType,
             priority: arguments.priority,
-            fbsimctlUrl: arguments.fbsimctlUrl,
             fbxctestUrl: arguments.fbxctestUrl
         )
     }
@@ -81,7 +80,6 @@ public final class TestArgFileGeneratorImpl: TestArgFileGenerator {
         environment: [String: String],
         testType: TestType,
         priority: UInt,
-        fbsimctlUrl: URL,
         fbxctestUrl: URL)
         throws
         -> TestArgFile
@@ -103,7 +101,7 @@ public final class TestArgFileGeneratorImpl: TestArgFileGenerator {
                     testType: testType,
                     testsToRun: testsToRun,
                     toolResources: ToolResources(
-                        simulatorControlTool: .fbsimctl(FbsimctlLocation(.remoteUrl(fbsimctlUrl))),
+                        simulatorControlTool: .simctl,
                         testRunnerTool: .fbxctest(FbxctestLocation(.remoteUrl(fbxctestUrl)))
                     ),
                     toolchainConfiguration: try toolchainConfigurationProvider.toolchainConfiguration()
@@ -155,7 +153,6 @@ public final class TestArgFileGeneratorImpl: TestArgFileGenerator {
                 fbxctest: arguments.fbxctestUrl.absoluteString,
                 testDestinationConfigurations: testDestinationConfigurations,
                 appPath: appPathDumpArgument,
-                fbsimctl: arguments.fbsimctlUrl.absoluteString,
                 tempFolder: temporaryFileProvider.temporaryFilePath()
             )
         )

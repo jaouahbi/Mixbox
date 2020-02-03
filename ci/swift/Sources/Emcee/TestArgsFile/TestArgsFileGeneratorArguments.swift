@@ -9,7 +9,6 @@ public final class TestArgFileGeneratorArguments {
     public let appPath: String
     public let additionalAppPaths: [String]
     public let xctestBundlePath: String
-    public let fbsimctlUrl: URL
     public let fbxctestUrl: URL
     public let mixboxTestDestinationConfigurations: [MixboxTestDestinationConfiguration]
     public let environment: [String: String]
@@ -22,7 +21,6 @@ public final class TestArgFileGeneratorArguments {
         appPath: String,
         additionalAppPaths: [String],
         xctestBundlePath: String,
-        fbsimctlUrl: URL,
         fbxctestUrl: URL,
         mixboxTestDestinationConfigurations: [MixboxTestDestinationConfiguration],
         environment: [String: String],
@@ -34,7 +32,6 @@ public final class TestArgFileGeneratorArguments {
         self.appPath = appPath
         self.additionalAppPaths = additionalAppPaths
         self.xctestBundlePath = xctestBundlePath
-        self.fbsimctlUrl = fbsimctlUrl
         self.fbxctestUrl = fbxctestUrl
         self.mixboxTestDestinationConfigurations = mixboxTestDestinationConfigurations
         self.environment = environment
