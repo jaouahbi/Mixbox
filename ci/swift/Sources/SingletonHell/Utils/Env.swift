@@ -17,6 +17,7 @@ public enum Env: String {
     case MIXBOX_CI_LOG_LEVEL
     case MIXBOX_CI_USES_FBXCTEST
     case MIXBOX_PUSHSPEC_STYLE
+    case MIXBOX_CI_XCODE_VERSION
 }
 
 extension EnvironmentProvider {

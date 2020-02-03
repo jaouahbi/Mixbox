@@ -15,7 +15,13 @@ public final class TeamcityBuildDi: CommonDi {
             TeamcityLocalTaskExecutor()
         }
         container.register(type: ToolchainConfigurationProvider.self) {
-            ToolchainConfigurationProviderImpl()
+            let environmentProvider: EnvironmentProvider = try container.resolve()
+            
+            return ToolchainConfigurationProviderImpl(
+                xcodeCFBundleShortVersionString: try environmentProvider.getOrThrow(
+                    env: Env.MIXBOX_CI_XCODE_VERSION
+                ) 
+            )
         }
         container.register(type: SimulatorSettingsProvider.self) {
             SimulatorSettingsProviderImpl(

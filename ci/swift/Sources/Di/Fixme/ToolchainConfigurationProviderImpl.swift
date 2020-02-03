@@ -2,12 +2,15 @@ import Emcee
 import Models
 
 public final class ToolchainConfigurationProviderImpl: ToolchainConfigurationProvider {
-    public init() {
+    private let xcodeCFBundleShortVersionString: String
+    
+    public init(xcodeCFBundleShortVersionString: String) {
+        self.xcodeCFBundleShortVersionString = xcodeCFBundleShortVersionString
     }
     
     public func toolchainConfiguration() throws -> ToolchainConfiguration {
         return ToolchainConfiguration(
-            developerDir: .useXcode(CFBundleShortVersionString: "11.2.1") // TODO: Pass via CI
+            developerDir: .useXcode(CFBundleShortVersionString: xcodeCFBundleShortVersionString)
         )
     }
 }
