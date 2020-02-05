@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='UnitTests.xctest' tests='149' failures='0'>
+  <testsuite name='UnitTests.AlwaysFalseMatcherTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.AlwaysFalseMatcherTests' name='test___description___is_correct' time='0.001'/>
+    <testcase classname='UnitTests.AlwaysFalseMatcherTests' name='test___match___mismatches___always' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.AlwaysTrueMatcherTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.AlwaysTrueMatcherTests' name='test___description___is_correct' time='0.000'/>
+    <testcase classname='UnitTests.AlwaysTrueMatcherTests' name='test___match___matches___always' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.AndMatcherTests' tests='5' failures='0'>
+    <testcase classname='UnitTests.AndMatcherTests' name='test___description___is_correct' time='0.001'/>
+    <testcase classname='UnitTests.AndMatcherTests' name='test___match___matches___if_all_nested_matchers_matches' time='0.000'/>
+    <testcase classname='UnitTests.AndMatcherTests' name='test___match___mismatches___if_all_nested_matchers_mismatches' time='0.000'/>
+    <testcase classname='UnitTests.AndMatcherTests' name='test___match___mismatches___if_there_are_no_nested_matchers' time='0.000'/>
+    <testcase classname='UnitTests.AndMatcherTests' name='test___match___mismatches_with_percentageOfMatching_equal_to_average_of_percentageOfMatching_of_nested_matchers' time='0.001'/>
+  </testsuite>
+  <testsuite name='UnitTests.AutomaticCurrentTestCaseProviderTests' tests='1' failures='0'>
+    <testcase classname='UnitTests.AutomaticCurrentTestCaseProviderTests' name='test' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.AutomaticRecorderAndReplayerCreationSettingsProviderImplTests' tests='3' failures='0'>
+    <testcase classname='UnitTests.AutomaticRecorderAndReplayerCreationSettingsProviderImplTests' name='test_automaticRecorderAndReplayerCreationSettings_returnsError_ifFileDoesntExist' time='0.002'/>
+    <testcase classname='UnitTests.AutomaticRecorderAndReplayerCreationSettingsProviderImplTests' name='test_automaticRecorderAndReplayerCreationSettings_returnsRecording_ifFileDoesntContainSession' time='0.001'/>
+    <testcase classname='UnitTests.AutomaticRecorderAndReplayerCreationSettingsProviderImplTests' name='test_automaticRecorderAndReplayerCreationSettings_returnsReplaying_ifFileContainsSession' time='0.001'/>
+  </testsuite>
+  <testsuite name='UnitTests.BundleResourcePathProviderImplTests' tests='4' failures='0'>
+    <testcase classname='UnitTests.BundleResourcePathProviderImplTests' name='test_path_returnsPath_ifResourceExists_0' time='0.001'/>
+    <testcase classname='UnitTests.BundleResourcePathProviderImplTests' name='test_path_returnsPath_ifResourceExists_1' time='0.000'/>
+    <testcase classname='UnitTests.BundleResourcePathProviderImplTests' name='test_path_returnsPath_ifResourceExists_2' time='0.000'/>
+    <testcase classname='UnitTests.BundleResourcePathProviderImplTests' name='test_path_throwsError_ifResourceDoesntExist' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.CGVectorExtensionsTests' tests='1' failures='0'>
+    <testcase classname='UnitTests.CGVectorExtensionsTests' name='test_mb_angle' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.CollectionExtensionTests' tests='11' failures='0'>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___returns_correct_chunks___for_obviously_correct_input' time='0.001'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___returns_zero_chunks___for_empty_collection___if_chunkSize_is_positive' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___returns_zero_chunks___for_empty_collection___if_chunkSize_is_zero' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___throws_error___for_zero_chunkSize___for_non_empty_collection' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___throws_error__for_empty_collection___if_chunkSize_is_negative' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___throws_error_for_negative_chunkSize' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___works_with_int_max' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_chunked___works_with_int_min' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_elementAtIndex' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_only' time='0.000'/>
+    <testcase classname='UnitTests.CollectionExtensionTests' name='test___mb_zip' time='0.001'/>
+  </testsuite>
+  <testsuite name='UnitTests.CurrentApplicationCurrentSimulatorFileSystemRootProviderTests' tests='1' failures='0'>
+    <testcase classname='UnitTests.CurrentApplicationCurrentSimulatorFileSystemRootProviderTests' name='test' time='0.001'/>
+  </testsuite>
+  <testsuite name='UnitTests.DebugDescriptionBuilderTests' tests='6' failures='0'>
+    <testcase classname='UnitTests.DebugDescriptionBuilderTests' name='test___debugDescription___when_array_is_added' time='0.000'/>
+    <testcase classname='UnitTests.DebugDescriptionBuilderTests' name='test___debugDescription___when_initialized_with_name' time='0.000'/>
+    <testcase classname='UnitTests.DebugDescriptionBuilderTests' name='test___debugDescription___when_initialized_with_type' time='0.001'/>
+    <testcase classname='UnitTests.DebugDescriptionBuilderTests' name='test___debugDescription___when_initialized_with_typeOf' time='0.000'/>
+    <testcase classname='UnitTests.DebugDescriptionBuilderTests' name='test___debugDescription___when_multiple_values_are_added' time='0.000'/>
+    <testcase classname='UnitTests.DebugDescriptionBuilderTests' name='test___debugDescription___when_value_is_added' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.DipDependencyInjectionTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.DipDependencyInjectionTests' name='test___register___doesnt_cause_retain_cycle' time='0.002'/>
+    <testcase classname='UnitTests.DipDependencyInjectionTests' name='test___resolve___resolves_lastly_registered_dependency' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.ElementSettingsTests' tests='5' failures='0'>
+    <testcase classname='UnitTests.ElementSettingsTests' name='test___with_interactionMode___overrides_interactionMode' time='0.000'/>
+    <testcase classname='UnitTests.ElementSettingsTests' name='test___with_interactionTimeout___overrides_interactionTimeout' time='0.000'/>
+    <testcase classname='UnitTests.ElementSettingsTests' name='test___with_matcher___overrides_matcher' time='0.000'/>
+    <testcase classname='UnitTests.ElementSettingsTests' name='test___with_name___overrides_name' time='0.000'/>
+    <testcase classname='UnitTests.ElementSettingsTests' name='test___with_scrollMode___overrides_scrollMode' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.ElementSnapshotStubTests' tests='4' failures='0'>
+    <testcase classname='UnitTests.ElementSnapshotStubTests' name='test___ElementSnapshotStub___add_child' time='0.000'/>
+    <testcase classname='UnitTests.ElementSnapshotStubTests' name='test___ElementSnapshotStub___fails___if_values_are_not_stubbed_and_failForNotStubbedValues_is_true' time='0.000'/>
+    <testcase classname='UnitTests.ElementSnapshotStubTests' name='test___ElementSnapshotStub___provides_default_values___if_failForNotStubbedValues_is_false' time='0.000'/>
+    <testcase classname='UnitTests.ElementSnapshotStubTests' name='test___ElementSnapshotStub___return_stubbed_values' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.ExtendedStackTraceEntryFromStackTraceEntryConverterImplTests' tests='3' failures='0'>
+    <testcase classname='UnitTests.ExtendedStackTraceEntryFromStackTraceEntryConverterImplTests' name='test_fallback_0' time='0.002'/>
+    <testcase classname='UnitTests.ExtendedStackTraceEntryFromStackTraceEntryConverterImplTests' name='test_fallback_1' time='0.000'/>
+    <testcase classname='UnitTests.ExtendedStackTraceEntryFromStackTraceEntryConverterImplTests' name='test_onRealTestMethod' time='0.050'/>
+  </testsuite>
+  <testsuite name='UnitTests.ExtendedStackTraceProviderImplTests' tests='1' failures='0'>
+    <testcase classname='UnitTests.ExtendedStackTraceProviderImplTests' name='test_on_real_trace' time='0.038'/>
+  </testsuite>
+  <testsuite name='UnitTests.FirstOfTargetFileFromCallStackFileLineForFailureProviderTests' tests='5' failures='0'>
+    <testcase classname='UnitTests.FirstOfTargetFileFromCallStackFileLineForFailureProviderTests' name='test' time='0.004'/>
+    <testcase classname='UnitTests.FirstOfTargetFileFromCallStackFileLineForFailureProviderTests' name='test_double_nested' time='0.002'/>
+    <testcase classname='UnitTests.FirstOfTargetFileFromCallStackFileLineForFailureProviderTests' name='test_nested' time='0.002'/>
+    <testcase classname='UnitTests.FirstOfTargetFileFromCallStackFileLineForFailureProviderTests' name='test_other_file' time='0.002'/>
+    <testcase classname='UnitTests.FirstOfTargetFileFromCallStackFileLineForFailureProviderTests' name='test_with_suffix' time='0.002'/>
+  </testsuite>
+  <testsuite name='UnitTests.GenericSerializationTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.GenericSerializationTests' name='test___dataSetForCheckingSr5346___is_set_up_properly' time='0.000'/>
+    <testcase classname='UnitTests.GenericSerializationTests' name='test___deserialize___can_deserialize_values_wounded_up_as_NaN___using_workaround' time='0.004'/>
+  </testsuite>
+  <testsuite name='UnitTests.IdlingResourceObjectTrackerTests' tests='9' failures='0'>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_busy___if_busy_resource_is_inserted' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_busy___if_resource_becomes_idle_and_other_is_inserted_as_busy' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_busy___if_resource_is_inserted_as_busy_and_other_becomes_idle' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_busy___if_resource_switches_states_multiple_times_to_busy' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_idle___if_busy_resource_is_inserted_and_become_idle' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_idle___if_busy_resource_is_inserted_and_then_deallocated' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_idle___if_busy_resource_is_inserted_twice_and_become_idle' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_idle___if_idle_resource_is_inserted' time='0.000'/>
+    <testcase classname='UnitTests.IdlingResourceObjectTrackerTests' name='test___tracker___is_idle___initially' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.ImageHashCalculatorTests' tests='1' failures='0'>
+    <testcase classname='UnitTests.ImageHashCalculatorTests' name='test_hashes_should_be_always_same' time='0.177'/>
+  </testsuite>
+  <testsuite name='UnitTests.IpcThrowingFunctionResultTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.IpcThrowingFunctionResultTests' name='test___serialization___if_case_is_returned' time='0.001'/>
+    <testcase classname='UnitTests.IpcThrowingFunctionResultTests' name='test___serialization___if_case_is_threw' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.IsSubviewMatcherTests' tests='5' failures='0'>
+    <testcase classname='UnitTests.IsSubviewMatcherTests' name='test___description___is_correct' time='0.001'/>
+    <testcase classname='UnitTests.IsSubviewMatcherTests' name='test___match___matches___if_superview_matches' time='0.000'/>
+    <testcase classname='UnitTests.IsSubviewMatcherTests' name='test___match___mismatches___view_that_is_being_matched' time='0.000'/>
+    <testcase classname='UnitTests.IsSubviewMatcherTests' name='test___match___produces_correct_mismatch_description_0' time='0.001'/>
+    <testcase classname='UnitTests.IsSubviewMatcherTests' name='test___match___produces_correct_mismatch_description_1' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' tests='6' failures='0'>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' name='test' time='0.003'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' name='test_otherFile' time='0.002'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' name='test_whenDoubleNestedFunctionDoesntMatchTestPattern' time='0.004'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' name='test_whenNestedFunctionDoesntMatchTestPattern' time='0.003'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' name='test_whenNestedFunctionMatchesTestPattern' time='0.007'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderIntegrationTests' name='test_withSuffix' time='0.002'/>
+  </testsuite>
+  <testsuite name='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' tests='13' failures='0'>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_example' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_fallbacks_0' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_fallbacks_1' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_fallbacks_2' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_fallbacks_3' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_fallbacks_4' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsFileLine_0' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsFileLine_1' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsFileLine_2' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsFileLine_3' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsNil_0' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsNil_1' time='0.000'/>
+    <testcase classname='UnitTests.LastCallOfCurrentTestFileLineForFailureProviderUnitTests' name='test_returnsNil_2' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.MatcherBuilderTests' tests='11' failures='0'>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_and' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_and_or' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_hasKeyboardFocus' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_id' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_isEnabled' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_label' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_or' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_placeholderValue' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_text' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_type' time='0.000'/>
+    <testcase classname='UnitTests.MatcherBuilderTests' name='test_value' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.NotMatcherTests' tests='3' failures='0'>
+    <testcase classname='UnitTests.NotMatcherTests' name='test___description___is_correct' time='0.000'/>
+    <testcase classname='UnitTests.NotMatcherTests' name='test___match___matches___if_nested_matcher_mismatches' time='0.000'/>
+    <testcase classname='UnitTests.NotMatcherTests' name='test___match___mismatches___if_nested_matcher_matches' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.ObjcRuntimeObjcMethodsWithUniqueImplementationProviderTests' tests='1' failures='0'>
+    <testcase classname='UnitTests.ObjcRuntimeObjcMethodsWithUniqueImplementationProviderTests' name='test' time='0.210'/>
+  </testsuite>
+  <testsuite name='UnitTests.ObjectiveCExceptionCatcherTests' tests='5' failures='0'>
+    <testcase classname='UnitTests.ObjectiveCExceptionCatcherTests' name='test___catch___calls_finally___exception_is_rethrown' time='0.000'/>
+    <testcase classname='UnitTests.ObjectiveCExceptionCatcherTests' name='test___catch___calls_finally___if_exception_is_raised' time='0.000'/>
+    <testcase classname='UnitTests.ObjectiveCExceptionCatcherTests' name='test___catch___calls_finally___if_there_is_no_exception' time='0.000'/>
+    <testcase classname='UnitTests.ObjectiveCExceptionCatcherTests' name='test___catch___catches_exception___if_exception_is_raised' time='0.000'/>
+    <testcase classname='UnitTests.ObjectiveCExceptionCatcherTests' name='test___catch___doesnt_catch_exception___if_there_is_no_exception' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.OnceTokenTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.OnceTokenTests' name='test_ThreadSafeOnceToken' time='0.000'/>
+    <testcase classname='UnitTests.OnceTokenTests' name='test_ThreadUnsafeOnceToken' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.OrMatcherTests' tests='5' failures='0'>
+    <testcase classname='UnitTests.OrMatcherTests' name='test___description___is_correct' time='0.000'/>
+    <testcase classname='UnitTests.OrMatcherTests' name='test___match___matches___if_at_least_one_of_nested_matchers_matches' time='0.000'/>
+    <testcase classname='UnitTests.OrMatcherTests' name='test___match___mismatches___if_all_nested_matchers_mismatches' time='0.000'/>
+    <testcase classname='UnitTests.OrMatcherTests' name='test___match___mismatches___if_there_are_no_nested_matchers' time='0.000'/>
+    <testcase classname='UnitTests.OrMatcherTests' name='test___match___mismatches_with_percentageOfMatching_equal_to_maximum_of_percentageOfMatching_of_nested_matchers' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.PerPixelSnapshotsComparatorTests' tests='6' failures='0'>
+    <testcase classname='UnitTests.PerPixelSnapshotsComparatorTests' name='test___compare___tells_images_are_different___if_pixels_are_different' time='0.001'/>
+    <testcase classname='UnitTests.PerPixelSnapshotsComparatorTests' name='test___compare___tells_images_are_different___if_sizes_are_different' time='0.000'/>
+    <testcase classname='UnitTests.PerPixelSnapshotsComparatorTests' name='test___compare___tells_images_are_similar___if_encoded_to_big_and_big_endian' time='0.000'/>
+    <testcase classname='UnitTests.PerPixelSnapshotsComparatorTests' name='test___compare___tells_images_are_similar___if_encoded_to_big_and_little_endian' time='0.001'/>
+    <testcase classname='UnitTests.PerPixelSnapshotsComparatorTests' name='test___compare___tells_images_are_similar___if_encoded_to_little_and_big_endian' time='0.000'/>
+    <testcase classname='UnitTests.PerPixelSnapshotsComparatorTests' name='test___compare___tells_images_are_similar___if_encoded_to_little_and_little_endian' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.RecordedSessionStubberTests' tests='20' failures='0'>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_empty_path_0' time='0.002'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_empty_path_1' time='0.001'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_empty_path_2' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_empty_path_3' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_path_0' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_path_1' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_path_2' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___backslash_at_end_makes_no_difference___with_path_3' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_empty_path_0' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_empty_path_1' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_empty_path_2' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_empty_path_3' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_empty_path_4' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_empty_path_5' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_path_0' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_path_1' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___port_makes_no_difference___with_path_2' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___scheme_makes_no_difference___with_empty_path' time='0.000'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___stub_is_stubbed_correctly' time='0.001'/>
+    <testcase classname='UnitTests.RecordedSessionStubberTests' name='test___with_empty_path' time='0.000'/>
+  </testsuite>
+  <testsuite name='UnitTests.SimulatorFileSystemRootTests' tests='2' failures='0'>
+    <testcase classname='UnitTests.SimulatorFileSystemRootTests' name='test_osxPath_returnsPath_ifFileDoesntExist' time='0.000'/>
+    <testcase classname='UnitTests.SimulatorFileSystemRootTests' name='test_osxPath_returnsPath_ifFileExists' time='0.001'/>
+  </testsuite>
+</testsuites>
