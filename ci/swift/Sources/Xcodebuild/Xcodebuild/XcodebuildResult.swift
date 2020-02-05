@@ -30,19 +30,21 @@ public final class XcodebuildResult {
     
     public func xctestBundlePath(appPath: String, testsTarget: String) throws -> String {
         return try existingPath(
-            path: "\(appPath)/PlugIns/\(testsTarget).xctest"
+            path: appPath.appending(
+                pathComponents: ["PlugIns", "\(testsTarget).xctest"]
+            )
         )
     }
     
     public func uiTestRunnerAppPath(testsTarget: String) throws -> String {
         return try existingPath(
-            path: "\(products)/\(testsTarget)-Runner.app"
+            path: products.appending(pathComponent: "\(testsTarget)-Runner.app")
         )
     }
     
     public func testedAppPath(appName: String) throws -> String {
         return try existingPath(
-            path: "\(products)/\(appName)"
+            path: products.appending(pathComponent: appName)
         )
     }
     

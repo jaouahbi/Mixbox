@@ -61,7 +61,8 @@ final class MissingConditionalCompilationClausesProviderImplTests: XCTestCase {
         let frameworksDirectory = temporaryFileProvider.temporaryFilePath()
         
         let frameworkName = "Framework"
-        let frameworkPath = "\(frameworksDirectory)/\(frameworkName)"
+        let frameworkPath = frameworksDirectory
+            .appending(pathComponent: frameworkName)
         
         try FileManager.default.createDirectory(
             atPath: frameworkPath,
@@ -78,7 +79,8 @@ final class MissingConditionalCompilationClausesProviderImplTests: XCTestCase {
             missingIfs: Bool)
             throws
         {
-            let fileName = "\(frameworkPath)/\(name)"
+            let fileName = frameworkPath
+                .appending(pathComponent: name)
             
             try contents.write(
                 toFile: fileName,

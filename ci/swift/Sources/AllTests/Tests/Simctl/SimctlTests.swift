@@ -108,6 +108,8 @@ final class SimctlTests: XCTestCase {
     }
     
     private func nearHere(_ fileName: String) -> String {
-        return ("\(#file)" as NSString).deletingLastPathComponent + "/\(fileName)"
+        return ("\(#file)" as NSString)
+            .deletingLastPathComponent
+            .appending(pathComponent: fileName)
     }
 }

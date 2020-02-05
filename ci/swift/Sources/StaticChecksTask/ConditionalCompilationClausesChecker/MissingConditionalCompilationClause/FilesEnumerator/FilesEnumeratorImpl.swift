@@ -12,7 +12,9 @@ public final class FilesEnumeratorImpl: FilesEnumerator {
     {
         if let enumerator = FileManager.default.enumerator(atPath: directory) {
             for case let path as String in enumerator {
-                try handler(enumerator, "\(directory)/\(path)")
+                try handler(
+                    enumerator,
+                    directory.appending(pathComponent: path)
             }
         } else {
             throw ErrorString("Failed to create enumerator of directory \(directory)")

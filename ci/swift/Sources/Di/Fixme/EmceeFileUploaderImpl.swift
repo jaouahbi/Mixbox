@@ -64,16 +64,21 @@ public final class EmceeFileUploaderImpl: EmceeFileUploader {
         
         let basename = (file as NSString).lastPathComponent
         
+        let localZip = "\(remoteName).zip"
+        
         _ = try bashExecutor.executeOrThrow(
             command: """
-            zip -r "\(temporaryDirectory)/\(remoteName).zip" "\(basename)" 1>/dev/null 2>/dev/null
+            zip -r "\(temporaryDirectory)/\(localZip)" "\(basename)" 1>/dev/null 2>/dev/null
             """,
             currentDirectory: (file as NSString).deletingLastPathComponent
         )
         
+        
         let remoteZip = try fileUploader.upload(
-            file: "\(temporaryDirectory)/\(remoteName).zip",
-            remoteName: "\(remoteName).zip"
+            file: temporaryDirectory.appending(
+                pathComponent: localZip
+            ),
+            remoteName: localZip
         )
         
         return try URL.from(string: "\(remoteZip.absoluteString)#\(basename)")

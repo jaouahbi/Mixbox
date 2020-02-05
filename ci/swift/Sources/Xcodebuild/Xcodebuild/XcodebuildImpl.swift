@@ -39,52 +39,52 @@ public final class XcodebuildImpl: Xcodebuild {
         throws
         -> XcodebuildResult
     {
-        try prepareForBuilding()
+//        try prepareForBuilding()
+//
+//        let derivedDataPath = derivedDataPathProvider.derivedDataPath()
+//        let projectDirectory = try repoRootProvider.repoRootPath() + "/" + projectDirectoryFromRepoRoot
+//
+//        print("Building using xcodebuild...")
+//
+//        try? FileManager.default.removeItem(atPath: derivedDataPath)
+//        try FileManager.default.createDirectory(atPath: derivedDataPath, withIntermediateDirectories: true, attributes: nil)
+//
+//        let cocoapods = try cocoapodsFactory.cocoapods(projectDirectory: projectDirectory)
+//
+//        try cocoapods.install()
+//
+//        let args = xcodebuildArgs(
+//            action: action,
+//            workspaceName: workspaceName,
+//            scheme: scheme,
+//            sdk: sdk,
+//            destination: destination,
+//            derivedDataPath: derivedDataPath
+//        )
+//
+//        let argsString = args.map { "\"\($0)\"" }.joined(separator: " ")
+//
+//        _ = try bashExecutor.executeOrThrow(
+//            command:
+//            """
+//            set -o pipefail
+//            xcodebuild \(argsString) | \(xcodebuildPipeFilter)
+//            """,
+//            currentDirectory: projectDirectory
+//        )
+//
+//        // TODO: Try to remove? I think it is outdated.
+//        _ = try? bashExecutor.executeOrThrow(
+//            command: """
+//            # Work around a bug when xcodebuild puts Build and Indexes folders to a pwd instead of dd/
+//
+//            [ -d "Build" ] && echo "Moving Build/ -> \(derivedDataPath)/" && mv -f "Build" "\(derivedDataPath)" || true
+//            [ -d "Index" ] && echo "Moving Index/ -> \(derivedDataPath)/" && mv -f "Index" "\(derivedDataPath)" || true
+//            """,
+//            currentDirectory: projectDirectory
+//        )
         
-        let derivedDataPath = derivedDataPathProvider.derivedDataPath()
-        let projectDirectory = try repoRootProvider.repoRootPath() + "/" + projectDirectoryFromRepoRoot
-        
-        print("Building using xcodebuild...")
-        
-        try? FileManager.default.removeItem(atPath: derivedDataPath)
-        try FileManager.default.createDirectory(atPath: derivedDataPath, withIntermediateDirectories: true, attributes: nil)
-        
-        let cocoapods = try cocoapodsFactory.cocoapods(projectDirectory: projectDirectory)
-        
-        try cocoapods.install()
-        
-        let args = xcodebuildArgs(
-            action: action,
-            workspaceName: workspaceName,
-            scheme: scheme,
-            sdk: sdk,
-            destination: destination,
-            derivedDataPath: derivedDataPath
-        )
-        
-        let argsString = args.map { "\"\($0)\"" }.joined(separator: " ")
-        
-        _ = try bashExecutor.executeOrThrow(
-            command:
-            """
-            set -o pipefail
-            xcodebuild \(argsString) | \(xcodebuildPipeFilter)
-            """,
-            currentDirectory: projectDirectory
-        )
-        
-        // TODO: Try to remove? I think it is outdated.
-        _ = try? bashExecutor.executeOrThrow(
-            command: """
-            # Work around a bug when xcodebuild puts Build and Indexes folders to a pwd instead of dd/
-            
-            [ -d "Build" ] && echo "Moving Build/ -> \(derivedDataPath)/" && mv -f "Build" "\(derivedDataPath)" || true
-            [ -d "Index" ] && echo "Moving Index/ -> \(derivedDataPath)/" && mv -f "Index" "\(derivedDataPath)" || true
-            """,
-            currentDirectory: projectDirectory
-        )
-        
-        return XcodebuildResult(derivedDataPath: derivedDataPath)
+        return XcodebuildResult(derivedDataPath: "/Users/ios-build/Library/Developer/Xcode/DerivedData/Tests-fgwnovfqexictzdfmeadaxtdupvn/")
     }
     
     private func xcodebuildArgs(

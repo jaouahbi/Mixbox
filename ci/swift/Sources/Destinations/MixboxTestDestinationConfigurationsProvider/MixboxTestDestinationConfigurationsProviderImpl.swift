@@ -17,8 +17,9 @@ public final class MixboxTestDestinationConfigurationsProviderImpl: MixboxTestDe
     }
     
     public func mixboxTestDestinationConfigurations() throws -> [MixboxTestDestinationConfiguration] {
-        let repoRoot = try repoRootProvider.repoRootPath()
-        let fullPath = "\(repoRoot)/ci/destinations/\(destinationFileBaseName)"
+        let fullPath = try repoRootProvider.repoRootPath().appending(
+            pathComponents: ["ci", "destinations", destinationFileBaseName]
+        )
         
         return try decodableFromJsonFileLoader.load(path: fullPath)
     }

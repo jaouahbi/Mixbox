@@ -14,7 +14,8 @@ public final class GemfileLocationProviderImpl: GemfileLocationProvider {
     }
     
     public func gemfileLocation() throws -> String {
-        let repoRootPath = try repoRootProvider.repoRootPath()
-        return ("\(repoRootPath)/ci/gemfiles/\(gemfileBasename)" as NSString).standardizingPath
+        return try repoRootProvider
+            .repoRootPath()
+            .appending(pathComponents: ["ci", "gemfiles", gemfileBasename])
     }
 }
