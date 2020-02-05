@@ -17,7 +17,7 @@ public final class MixboxTestDestinationConfigurationsProviderImpl: MixboxTestDe
     }
     
     public func mixboxTestDestinationConfigurations() throws -> [MixboxTestDestinationConfiguration] {
-        let fullPath = try repoRootProvider.repoRootPath().appending(
+        let fullPath = try repoRootProvider.repoRootPath().mb_appending(
             pathComponents: ["ci", "destinations", destinationFileBaseName]
         )
         

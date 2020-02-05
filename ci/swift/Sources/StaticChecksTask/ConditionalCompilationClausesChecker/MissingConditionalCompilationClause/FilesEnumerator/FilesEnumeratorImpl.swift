@@ -14,7 +14,8 @@ public final class FilesEnumeratorImpl: FilesEnumerator {
             for case let path as String in enumerator {
                 try handler(
                     enumerator,
-                    directory.appending(pathComponent: path)
+                    directory.mb_appending(pathComponent: path)
+                )
             }
         } else {
             throw ErrorString("Failed to create enumerator of directory \(directory)")

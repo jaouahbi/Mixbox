@@ -62,7 +62,7 @@ final class MissingConditionalCompilationClausesProviderImplTests: XCTestCase {
         
         let frameworkName = "Framework"
         let frameworkPath = frameworksDirectory
-            .appending(pathComponent: frameworkName)
+            .mb_appending(pathComponent: frameworkName)
         
         try FileManager.default.createDirectory(
             atPath: frameworkPath,
@@ -80,7 +80,7 @@ final class MissingConditionalCompilationClausesProviderImplTests: XCTestCase {
             throws
         {
             let fileName = frameworkPath
-                .appending(pathComponent: name)
+                .mb_appending(pathComponent: name)
             
             try contents.write(
                 toFile: fileName,

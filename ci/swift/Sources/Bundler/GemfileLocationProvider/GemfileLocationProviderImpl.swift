@@ -16,6 +16,6 @@ public final class GemfileLocationProviderImpl: GemfileLocationProvider {
     public func gemfileLocation() throws -> String {
         return try repoRootProvider
             .repoRootPath()
-            .appending(pathComponents: ["ci", "gemfiles", gemfileBasename])
+            .mb_appending(pathComponents: ["ci", "gemfiles", gemfileBasename])
     }
 }

@@ -30,7 +30,7 @@ public final class XcodebuildResult {
     
     public func xctestBundlePath(appPath: String, testsTarget: String) throws -> String {
         return try existingPath(
-            path: appPath.appending(
+            path: appPath.mb_appending(
                 pathComponents: ["PlugIns", "\(testsTarget).xctest"]
             )
         )
@@ -38,13 +38,13 @@ public final class XcodebuildResult {
     
     public func uiTestRunnerAppPath(testsTarget: String) throws -> String {
         return try existingPath(
-            path: products.appending(pathComponent: "\(testsTarget)-Runner.app")
+            path: products.mb_appending(pathComponent: "\(testsTarget)-Runner.app")
         )
     }
     
     public func testedAppPath(appName: String) throws -> String {
         return try existingPath(
-            path: products.appending(pathComponent: appName)
+            path: products.mb_appending(pathComponent: appName)
         )
     }
     

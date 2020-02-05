@@ -75,7 +75,7 @@ public final class EmceeFileUploaderImpl: EmceeFileUploader {
         
         
         let remoteZip = try fileUploader.upload(
-            file: temporaryDirectory.appending(
+            file: temporaryDirectory.mb_appending(
                 pathComponent: localZip
             ),
             remoteName: localZip
