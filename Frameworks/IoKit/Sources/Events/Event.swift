@@ -41,8 +41,8 @@ extension Event {
         var typedArray = [IOHIDEventRef]()
         for index in 0..<CFArrayGetCount(untypedArray) {
             if let unsafePointer: UnsafeRawPointer = CFArrayGetValueAtIndex(untypedArray, index) {
-                let element = unsafeBitCast(unsafePointer, to: IOHIDEventRef.self)
-                typedArray.append(element)
+                let element = unsafePointer.assumingMemoryBound(to: IOHIDEventRef.self)
+                typedArray.append(element.pointee)
             }
         }
         return typedArray.map { iohidEventRef in
