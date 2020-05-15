@@ -2,7 +2,7 @@
 
 import Foundation
 
-enum MBCAAnimationState: Int, Equatable {
+enum CAAnimationState: Int, Equatable {
     case pendingStart = 0
     case started = 1
     case stopped = 2

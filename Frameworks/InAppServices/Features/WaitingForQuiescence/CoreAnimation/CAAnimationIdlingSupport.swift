@@ -43,53 +43,80 @@ final class CAAnimationIdlingSupport {
 
 extension CAAnimation {
     @objc fileprivate func mbswizzled_setDelegate(_ delegate: CAAnimationDelegate?) {
-        let surrogate = SurrogateCAAnimationDelegate.surrogateDelegate(
-            delegate: delegate
+        let delegate = wrappedDelegate(
+            originalDelegate: delegate
         )
-        mbswizzled_setDelegate(surrogate)
+        
+        // It's safe to store delegate, because proxy holds original delegate weakly
+        proxyDelegateHolder.value = delegate
+        
+        mbswizzled_setDelegate(delegate)
     }
     
     @objc fileprivate func mbswizzled_delegate() -> CAAnimationDelegate? {
-        let delegate = self.mbswizzled_delegate()
-        
-        return SurrogateCAAnimationDelegate.surrogateDelegate(
-            delegate: delegate
+        return wrappedDelegate(
+            originalDelegate: mbswizzled_delegate()
         )
     }
-
-    var mb_MBCAAnimationState: MBCAAnimationState {
+    
+    private func wrappedDelegate(originalDelegate: CAAnimationDelegate?) -> CAAnimationDelegate? {
+        return CAAnimationDelegateWrapper.wrappedDelegate(
+            originalDelegate: originalDelegate,
+            onAnimationDidStart: { animation in
+                animation?.mb_state = .started
+            },
+            onAnimationDidStop: { animation, _ in
+                animation?.mb_state = .stopped
+            }
+        )
+    }
+    
+    var mb_state: CAAnimationState {
         set {
-            mb_animationState.value = newValue
+            stateAssociatedValue.value = newValue
             
-            if newValue == .started {
+            switch newValue {
+            case .started:
                 mb_trackForDurationOfAnimation()
-            } else {
+            case .stopped:
                 mb_untrack()
+            case .pendingStart:
+                break
             }
         }
         get {
-            return mb_animationState.value
+            return stateAssociatedValue.value
         }
     }
     
     @objc func mb_trackForDurationOfAnimation() {
-        mb_animationTrackedIdlingResources.value = IdlingResourceObjectTracker.instance.track(parent: self)
+        animationTrackedIdlingResource.value = IdlingResourceObjectTracker.instance.track(parent: self)
 
         var animRuntimeTime = duration + Double(repeatCount) * duration + repeatDuration
+        
+        // Add extra padding to the animation runtime just as a safeguard. This comes into play when
+        // animatonDidStop delegate is not invoked before the expected end-time is reached.
+        // The state is then automatically cleared for this animation as it should have finished by now.
         animRuntimeTime += min(animRuntimeTime, 1.0)
-        perform(#selector(mb_untrack), with: nil, afterDelay: animRuntimeTime, inModes: [.common])
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + animRuntimeTime) {
+            self.mb_untrack()
+        }
     }
     
-    @objc func mb_untrack() {
-        mb_animationTrackedIdlingResources.value?.untrack()
-        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(mb_untrack), object: nil)
+    func mb_untrack() {
+        animationTrackedIdlingResource.value?.untrack()
     }
     
-    private var mb_animationTrackedIdlingResources: AssociatedObject<TrackedIdlingResource> {
+    private var proxyDelegateHolder: AssociatedObject<CAAnimationDelegate> {
         return AssociatedObject(container: self, key: #function)
     }
     
-    private var mb_animationState: AssociatedValue<MBCAAnimationState> {
+    private var animationTrackedIdlingResource: AssociatedObject<TrackedIdlingResource> {
+        return AssociatedObject(container: self, key: #function)
+    }
+    
+    private var stateAssociatedValue: AssociatedValue<CAAnimationState> {
         return AssociatedValue(container: self, key: #function, defaultValue: .pendingStart)
     }
 }

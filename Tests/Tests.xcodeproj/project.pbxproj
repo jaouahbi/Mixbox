@@ -110,6 +110,7 @@
 		F8341972232FE74800E9EC3A /* LocatorsPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83416E4232FAB9600E9EC3A /* LocatorsPerformanceTests.swift */; };
 		F8341976232FE9B400E9EC3A /* LocatorsPerformanceTestsViewPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8341974232FE91D00E9EC3A /* LocatorsPerformanceTestsViewPageObject.swift */; };
 		F8341977232FE9B500E9EC3A /* LocatorsPerformanceTestsViewPageObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8341974232FE91D00E9EC3A /* LocatorsPerformanceTestsViewPageObject.swift */; };
+		F836424F246DD64400604ED4 /* CAAnimationDelegateWrapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F836424E246DD64400604ED4 /* CAAnimationDelegateWrapperTests.swift */; };
 		F836C50522DF300900F78C6F /* NetworkStubbingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E3200922CF87F30094D2EA /* NetworkStubbingTests.swift */; };
 		F839A7E7214FC218009F77AB /* ExtendedStackTraceProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839A7E6214FC218009F77AB /* ExtendedStackTraceProviderMock.swift */; };
 		F839A7EB214FC39F009F77AB /* LastCallOfCurrentTestFileLineForFailureProviderUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F839A7EA214FC39F009F77AB /* LastCallOfCurrentTestFileLineForFailureProviderUnitTests.swift */; };
@@ -695,6 +696,7 @@
 		F83416E4232FAB9600E9EC3A /* LocatorsPerformanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorsPerformanceTests.swift; sourceTree = "<group>"; };
 		F83416E7232FAC1600E9EC3A /* LocatorsPerformanceTestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorsPerformanceTestsView.swift; sourceTree = "<group>"; };
 		F8341974232FE91D00E9EC3A /* LocatorsPerformanceTestsViewPageObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocatorsPerformanceTestsViewPageObject.swift; sourceTree = "<group>"; };
+		F836424E246DD64400604ED4 /* CAAnimationDelegateWrapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAAnimationDelegateWrapperTests.swift; sourceTree = "<group>"; };
 		F839A7E6214FC218009F77AB /* ExtendedStackTraceProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedStackTraceProviderMock.swift; sourceTree = "<group>"; };
 		F839A7EA214FC39F009F77AB /* LastCallOfCurrentTestFileLineForFailureProviderUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastCallOfCurrentTestFileLineForFailureProviderUnitTests.swift; sourceTree = "<group>"; };
 		F839A806215124A9009F77AB /* ApplicationCrashProducesMeaninfulErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCrashProducesMeaninfulErrorTests.swift; sourceTree = "<group>"; };
@@ -2765,6 +2767,7 @@
 			children = (
 				F8D8556C235E54720068047A /* ObjcRuntimeObjcMethodsWithUniqueImplementationProviderTests.swift */,
 				F889439B239067A2009979BE /* IdlingResourceObjectTrackerTests.swift */,
+				F836424E246DD64400604ED4 /* CAAnimationDelegateWrapperTests.swift */,
 			);
 			path = MixboxInAppServices;
 			sourceTree = "<group>";
@@ -4168,6 +4171,7 @@
 				F8C5A34C22B2E00800E643EC /* CollectionExtensionTests.swift in Sources */,
 				F8E160D02418674600B4912F /* MultiTouchEventFactoryTests.swift in Sources */,
 				F820873E2141AD8400DCBA2D /* ElementSnapshotStubTests.swift in Sources */,
+				F836424F246DD64400604ED4 /* CAAnimationDelegateWrapperTests.swift in Sources */,
 				F80084BC228480A700DF1DC6 /* CurrentApplicationCurrentSimulatorFileSystemRootProviderTests.swift in Sources */,
 				F80CEDE222DE27E9006C804D /* IpcThrowingFunctionResultTests.swift in Sources */,
 				F84D126A2166A7BB00A178B4 /* ObjectiveCExceptionCatcherTests.swift in Sources */,
