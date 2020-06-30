@@ -90,7 +90,7 @@ public final class EmceeBlackBoxTestRunner: BlackBoxTestRunner {
                 mixboxTestDestinationConfigurations: mixboxTestDestinationConfigurations,
                 environment: environment(),
                 testType: .uiTest,
-                testDiscoveryMode: .runtimeLogicTest,
+                testDiscoveryMode: .parseFunctionSymbols,
                 priority: priority
             )
         )
