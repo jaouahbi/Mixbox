@@ -72,7 +72,7 @@ public final class InAppServicesDefaultDependencyCollectionRegisterer: Dependenc
                         runLoopModesStackProvider: RunLoopModesStackProviderImpl()
                     )
                 ),
-                timeout: 15
+                defaultTimeout: 15
             )
         }
         di.register(type: IpcStarterProvider.self) { di in

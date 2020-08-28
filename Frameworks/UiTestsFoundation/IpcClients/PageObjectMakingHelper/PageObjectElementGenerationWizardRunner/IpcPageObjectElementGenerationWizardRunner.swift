@@ -11,7 +11,8 @@ public final class IpcPageObjectElementGenerationWizardRunner: SynchronousPageOb
     public func run() throws {
         let result = try synchronousIpcClient.callOrThrow(
             method: RunPageObjectElementGenerationWizardIpcMethod(),
-            arguments: IpcVoid()
+            arguments: IpcVoid(),
+            timeout: .custom(3600)
         )
         try result.getVoidReturnValue()
     }

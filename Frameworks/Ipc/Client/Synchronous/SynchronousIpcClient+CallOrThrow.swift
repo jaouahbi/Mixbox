@@ -6,13 +6,15 @@ extension SynchronousIpcClient {
     // Synchronous throwing version
     public func callOrThrow<Method: IpcMethod>(
         method: Method,
-        arguments: Method.Arguments)
+        arguments: Method.Arguments,
+        timeout: CustomizableTimeInterval = .default)
         throws
         -> Method.ReturnValue
     {
         let result = call(
             method: method,
-            arguments: arguments
+            arguments: arguments,
+            timeout: timeout
         )
         
         switch result {
@@ -27,33 +29,38 @@ extension SynchronousIpcClient {
     
     // Synchronous throwing version for methods without Arguments
     public func callOrThrow<Method: IpcMethod>(
-        method: Method)
+        method: Method,
+        timeout: CustomizableTimeInterval = .default)
         throws
         -> Method.ReturnValue
         where Method.Arguments == IpcVoid
     {
         return try callOrThrow(
             method: method,
-            arguments: IpcVoid()
+            arguments: IpcVoid(),
+            timeout: timeout
         )
     }
     
     // Synchronous throwing version for methods without ReturnValue
     public func callOrThrow<Method: IpcMethod>(
         method: Method,
-        arguments: Method.Arguments)
+        arguments: Method.Arguments,
+        timeout: CustomizableTimeInterval = .default)
         throws
         where Method.ReturnValue == IpcVoid
     {
         let _: IpcVoid = try callOrThrow(
             method: method,
-            arguments: arguments
+            arguments: arguments,
+            timeout: timeout
         )
     }
     
     // Synchronous throwing version for methods without Arguments & ReturnValue
     public func callOrThrow<Method: IpcMethod>(
-        method: Method)
+        method: Method,
+        timeout: CustomizableTimeInterval = .default)
         throws
         where
         Method.ReturnValue == IpcVoid,
@@ -61,7 +68,8 @@ extension SynchronousIpcClient {
     {
         let _: IpcVoid = try callOrThrow(
             method: method,
-            arguments: IpcVoid()
+            arguments: IpcVoid(),
+            timeout: timeout
         )
     }
 }

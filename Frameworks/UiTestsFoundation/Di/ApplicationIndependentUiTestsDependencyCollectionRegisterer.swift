@@ -45,7 +45,7 @@ public final class ApplicationIndependentUiTestsDependencyCollectionRegisterer: 
         di.register(type: SynchronousIpcClientFactory.self) { di in
             RunLoopSpinningSynchronousIpcClientFactory(
                 runLoopSpinningWaiter: try di.resolve(),
-                timeout: 15
+                defaultTimeout: 15
             )
         }
     }

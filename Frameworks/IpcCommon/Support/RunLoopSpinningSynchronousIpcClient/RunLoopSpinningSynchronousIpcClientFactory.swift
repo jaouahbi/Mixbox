@@ -5,21 +5,21 @@ import MixboxFoundation
 
 public final class RunLoopSpinningSynchronousIpcClientFactory: SynchronousIpcClientFactory {
     private let runLoopSpinningWaiter: RunLoopSpinningWaiter
-    private let timeout: TimeInterval
+    private let defaultTimeout: TimeInterval
     
     public init(
         runLoopSpinningWaiter: RunLoopSpinningWaiter,
-        timeout: TimeInterval)
+        defaultTimeout: TimeInterval)
     {
         self.runLoopSpinningWaiter = runLoopSpinningWaiter
-        self.timeout = timeout
+        self.defaultTimeout = defaultTimeout
     }
     
     public func synchronousIpcClient(ipcClient: IpcClient) -> SynchronousIpcClient {
         return RunLoopSpinningSynchronousIpcClient(
             ipcClient: ipcClient,
             runLoopSpinningWaiter: runLoopSpinningWaiter,
-            timeout: timeout
+            defaultTimeout: defaultTimeout
         )
     }
 }

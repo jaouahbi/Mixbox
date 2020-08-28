@@ -11,7 +11,8 @@ public final class IpcAlertDisplayer: SynchronousAlertDisplayer {
     public func display(alert: Alert) throws {
         let result = try synchronousIpcClient.callOrThrow(
             method: DisplayAlertIpcMethod(),
-            arguments: alert
+            arguments: alert,
+            timeout: .custom(3600)
         )
         try result.getVoidReturnValue()
     }

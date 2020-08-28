@@ -6,6 +6,7 @@ extension SynchronousIpcClient {
     public func callOrFail<Method: IpcMethod>(
         method: Method,
         arguments: Method.Arguments,
+        timeout: CustomizableTimeInterval = .default,
         file: StaticString = #file,
         line: UInt = #line)
         -> Method.ReturnValue
@@ -13,7 +14,8 @@ extension SynchronousIpcClient {
         return UnavoidableFailure.doOrFail(file: file, line: line) {
             try callOrThrow(
                 method: method,
-                arguments: arguments
+                arguments: arguments,
+                timeout: timeout
             )
         }
     }
@@ -21,6 +23,7 @@ extension SynchronousIpcClient {
     // Synchronous version for methods without arguments
     public func callOrFail<Method: IpcMethod>(
         method: Method,
+        timeout: CustomizableTimeInterval = .default,
         file: StaticString = #file,
         line: UInt = #line)
         -> Method.ReturnValue
@@ -29,7 +32,8 @@ extension SynchronousIpcClient {
         return UnavoidableFailure.doOrFail(file: file, line: line) {
             try callOrThrow(
                 method: method,
-                arguments: IpcVoid()
+                arguments: IpcVoid(),
+                timeout: timeout
             )
         }
     }
@@ -37,6 +41,7 @@ extension SynchronousIpcClient {
     // Synchronous version for methods without arguments and return value
     public func callOrFail<Method: IpcMethod>(
         method: Method,
+        timeout: CustomizableTimeInterval = .default,
         file: StaticString = #file,
         line: UInt = #line)
         where
@@ -46,7 +51,8 @@ extension SynchronousIpcClient {
         _ = UnavoidableFailure.doOrFail(file: file, line: line) {
             try callOrThrow(
                 method: method,
-                arguments: IpcVoid()
+                arguments: IpcVoid(),
+                timeout: timeout
             )
         }
     }
@@ -55,6 +61,7 @@ extension SynchronousIpcClient {
     public func callOrFail<Method: IpcMethod>(
         method: Method,
         arguments: Method.Arguments,
+        timeout: CustomizableTimeInterval = .default,
         file: StaticString = #file,
         line: UInt = #line)
         where
@@ -63,7 +70,8 @@ extension SynchronousIpcClient {
         _ = UnavoidableFailure.doOrFail(file: file, line: line) {
             try callOrThrow(
                 method: method,
-                arguments: arguments
+                arguments: arguments,
+                timeout: timeout
             )
         }
     }
