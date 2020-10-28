@@ -121,12 +121,7 @@ public final class TestArgFileGeneratorImpl: TestArgFileGenerator {
                     ),
                     testType: testType,
                     testsToRun: testsToRun,
-                    workerCapabilityRequirements: [
-                        WorkerCapabilityRequirement(
-                            capabilityName: "emcee.dt.xcode.12_0_1",
-                            constraint: .present
-                        )
-                    ]
+                    workerCapabilityRequirements: []
                 )
             },
             prioritizedJob: PrioritizedJob(

@@ -135,12 +135,7 @@ public final class EmceeDumpCommandImpl: EmceeDumpCommand {
                     ),
                     testType: TestType.logicTest,
                     testsToRun: [],
-                    workerCapabilityRequirements: [
-                        WorkerCapabilityRequirement(
-                            capabilityName: "emcee.dt.xcode.12_0_1",
-                            constraint: .present
-                        )
-                    ]
+                    workerCapabilityRequirements: []
                 )
             ],
             prioritizedJob: PrioritizedJob(
